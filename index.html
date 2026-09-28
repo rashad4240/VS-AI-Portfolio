@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VS AI - Your AI Coding Companion</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0b0f19;
+            color: white;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            border-bottom: 1px solid #222938;
+        }
+        .video-container {
+            max-width: 900px;
+            margin: 30px auto;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .video-container video {
+            width: 100%;
+            display: block;
+        }
+                .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #4f8cff;
+        }
+
+        nav a {
+            color: #aaa;
+            text-decoration: none;
+            margin-left: 25px;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .hero h1 {
+            font-size: 65px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #4f8cff;
+        }
+
+        .hero p {
+            max-width: 700px;
+            color: #aaa;
+            font-size: 20px;
+        }
+
+        .button {
+            margin-top: 30px;
+            padding: 14px 28px;
+            background: #4f8cff;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 8%;
+        }
+
+        .section-title {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .section-text {
+            max-width: 800px;
+            color: #aaa;
+        }
+
+        /* Problem */
+        .problem-box {
+            margin-top: 30px;
+            padding: 30px;
+            background: #121827;
+            border: 1px solid #252d3d;
+            border-radius: 12px;
+        }
+
+        /* Features */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .feature {
+            background: #121827;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #252d3d;
+        }
+
+        .feature h3 {
+            margin-bottom: 10px;
+        }
+
+        .feature p {
+            color: #aaa;
+        }
+
+        /* How it works */
+        .steps {
+            margin-top: 40px;
+            display: grid;
+            gap: 20px;
+        }
+
+        .step {
+            padding: 25px;
+            background: #121827;
+            border-left: 4px solid #4f8cff;
+            border-radius: 8px;
+        }
+
+        .step span {
+            color: #4f8cff;
+            font-weight: bold;
+        }
+
+        /* AI Ball Demo */
+        .demo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 300px;
+            background: #121827;
+            border-radius: 15px;
+            margin-top: 40px;
+        }
+
+        .ai-ball {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background: #4f8cff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            cursor: pointer;
+            box-shadow: 0 0 40px #4f8cff;
+            transition: 0.3s;
+        }
+
+        .ai-ball:hover {
+            transform: scale(1.15);
+        }
+
+        /* Future */
+        .future {
+            color: #aaa;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px;
+            border-top: 1px solid #222938;
+            color: #777;
+        }
+
+        /* Mobile */
+        @media (max-width: 800px) {
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            nav a {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">VS <span>AI</span></div>
+
+        <div>
+            <a href="#problem">Problem</a>
+            <a href="#solution">Solution</a>
+            <a href="#features">Features</a>
+            <a href="#future">Future</a>
+        </div>
+    </nav>
+
+
+    <!-- Hero -->
+    <section class="hero">
+
+        <h1>Meet <span>VS AI</span></h1>
+
+        <p>
+            An AI coding companion designed to understand what developers
+            are currently working on — without forcing them to copy and
+            paste their code into another application.
+        </p>
+
+        <a class="button" href="#solution">
+            Explore the Idea
+        </a>
+
+    </section>
+
+
+    <!-- Problem -->
+    <section id="problem">
+
+        <h2 class="section-title">The Problem</h2>
+
+        <p class="section-text">
+            When developers get stuck while programming, they often have to
+            stop coding, copy their code, open an AI chatbot, paste the code,
+            explain the problem, and then return to their editor.
+        </p>
+
+        <div class="problem-box">
+            <h3>Developer gets stuck 😵</h3>
+            <p>
+                Stop coding → Copy code → Open ChatGPT → Paste code →
+                Explain problem → Read answer → Return to editor
+            </p>
+        </div>
+
+    </section>
+
+
+    <!-- Solution -->
+    <section id="solution">
+
+        <h2 class="section-title">The VS AI Solution</h2>
+
+        <p class="section-text">
+            VS AI aims to bring the AI assistant directly into the coding
+            environment.
+        </p>
+
+        <div class="demo">
+
+            <div class="ai-ball" onclick="openAssistant()">
+                AI
+            </div>
+
+        </div>
+
+        <p id="demo-message"
+           style="text-align:center; margin-top:20px; color:#aaa;">
+        </p>
+
+    </section>
+
+
+    <!-- Features -->
+    <section id="features">
+
+        <h2 class="section-title">Core Features</h2>
+
+        <div class="features">
+
+            <div class="feature">
+                <h3>🧠 Code Understanding</h3>
+                <p>
+                    Understand the current file and project context so the
+                    developer doesn't need to copy everything manually.
+                </p>
+            </div>
+
+            <div class="feature">
+                <h3>💬 AI Conversation</h3>
+                <p>
+                    Ask questions such as "Why is this error happening?"
+                    or "How does this function work?"
+                </p>
+            </div>
+
+            <div class="feature">
+                <h3>🎤 Voice Interaction</h3>
+                <p>
+                    Developers could speak naturally with the AI instead
+                    of typing every question.
+                </p>
+            </div>
+
+            <div class="feature">
+                <h3>⚡ Quick Help</h3>
+                <p>
+                    Click the floating AI button whenever you get stuck.
+                </p>
+            </div>
+
+            <div class="feature">
+                <h3>🔐 Privacy Focus</h3>
+                <p>
+                    The system should only access the coding context needed
+                    to answer the user's question.
+                </p>
+            </div>
+
+            <div class="feature">
+                <h3>🤖 JARVIS-like Experience</h3>
+                <p>
+                    A natural conversational experience inspired by the idea
+                    of an always-available coding assistant.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- How It Works -->
+    <section>
+
+        <h2 class="section-title">How It Works</h2>
+
+        <div class="steps">
+
+            <div class="step">
+                <span>01</span>
+                <h3>Write Code</h3>
+                <p>
+                    The developer works normally inside the coding environment.
+                </p>
+            </div>
+
+            <div class="step">
+                <span>02</span>
+                <h3>Get Stuck</h3>
+                <p>
+                    The developer doesn't understand an error or how something works.
+                </p>
+            </div>
+
+            <div class="step">
+                <span>03</span>
+                <h3>Click VS AI</h3>
+                <p>
+                    The floating AI button opens the assistant.
+                </p>
+            </div>
+
+            <div class="step">
+                <span>04</span>
+                <h3>Ask Naturally</h3>
+                <p>
+                    The developer types or speaks the question.
+                </p>
+            </div>
+
+            <div class="step">
+                <span>05</span>
+                <h3>Understand & Continue</h3>
+                <p>
+                    VS AI explains the problem and helps the developer
+                    continue coding.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Future -->
+    <section id="future">
+
+        <h2 class="section-title">Future Vision</h2>
+
+        <p class="section-text future">
+
+            VS AI could eventually become an intelligent coding environment
+            capable of understanding project structure, explaining code,
+            detecting errors, assisting with debugging, supporting voice
+            conversations, and helping developers learn while they build.
+
+        </p>
+
+    </section>
+    <div class="video-container">
+    <video controls>
+        <source src="./vs-ai-demo.mp4.mp4" type="video/mp4">
+    </video>
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>VS AI — AI Coding Companion</p>
+        <p>Concept & Project Vision by Kazi Rashad</p>
+
+    </footer>
+
+
+    <script>
+
+        function openAssistant() {
+
+            document.getElementById("demo-message").innerText =
+                "Imagine clicking this button and talking directly with your AI coding assistant.";
+
+        }
+
+    </script>
+
+</body>
+</html>
